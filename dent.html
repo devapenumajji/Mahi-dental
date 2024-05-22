@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mahi Dental Clinic</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+        
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+         /* Your CSS styles here */
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    li {
+        margin-right: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+        
+        .contact {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5; /* Adjust as needed */
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-text {
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #f19114; /* Adjust as needed */
+        }
+        
+        .btn-primary {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3; /* Adjust the opacity as needed */
+        }
+        
+        
+        .schedule-visit {
+            background-color: #eaf6ff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .schedule-visit .info-box {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+        
+        .schedule-visit h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .schedule-visit p {
+            margin-bottom: 20px;
+        }
+        
+        .schedule-visit .btn-secondary {
+            padding: 10px 20px;
+            background-color: #fff;
+            border: 2px solid #3498db;
+            color: #3498db;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+
+        .about-us .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+            background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.2)), url('background.jpg');
+            background-size: cover;
+            color: white;
+        }
+        
+        .about-us .hero-text {
+            max-width: 50%;
+        }
+        
+        .about-us .hero-text h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .about-us .hero-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-us .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .about-us .btn-primary,
+        .about-us .btn-secondary {
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .about-us .btn-primary {
+            background-color: #1abc9c;
+            color: white;
+        }
+        
+        .about-us .btn-secondary {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .about-us .hero-image img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .services {
+            display: flex;
+            justify-content: space-around;
+            background-color: #007bff;
+            padding: 40px 0;
+            color: white;
+        }
+        
+        .service {
+            text-align: center;
+            max-width: 20%;
+        }
+        
+        .service-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .service h3 {
+            margin-bottom: 10px;
+        }
+        
+        .service p {
+            margin-bottom: 20px;
+        }
+        
+        .btn-tertiary {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .services-section {
+            padding: 60px 0;
+            background-color: #e6f7ff;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            color: #1e90ff;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .section-header h3 {
+            font-size: 2em;
+        }
+        
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-card .icon img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .service-card p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .service-card a {
+            text-decoration: none;
+            color: #1e90ff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .service-card a:hover {
+            color: #1abc9c;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                width: 90%;
+            }
+
+            .hero-image img {
+                width: 500px;
+            }
+
+            .about-us .hero-image img {
+                width: 300px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .about-us .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-us .hero-text {
+                max-width: 100%;
+            }
+
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .services-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5em;
+            }
+
+            .about-us .hero-text h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h1 {
+                font-size: 2em;
+            }
+
+            .hero-text .btn-primary {
+                font-size: 0.9em;
+            }
+
+            .hero-image img {
+                width: 100%;
+            }
+
+            .schedule-visit .info-box {
+                max-width: 90%;
+            }
+
+            .about-us .hero-text h1 {
+                font-size: 2em;
+            }
+
+            .about-us .btn-primary,
+            .about-us .btn-secondary {
+                font-size: 0.9em;
+            }
+
+            .about-us .hero-image img {
+                width: 100%;
+            }
+
+            .service-card {
+                width: 90%;
+            }
+
+            .services-section {
+                padding: 30px 0;
+            }
+        }
+
+        /* Doctors styling css */
+
+        .doctors-section {
+            padding: 50px;
+        }
+        .doctors-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .doctor-card {
+            width: 300px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+            transform-style: preserve-3d; /* Added for the flip effect */
+            position: relative; /* Added for button positioning */
+        }
+        .doctor-card:hover {
+            transform: rotateY(180deg);
+        }
+        .doctor-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Make the image circular */
+            margin: 0 auto 15px; /* Center the image and add space below */
+            display: block; /* Ensures proper centering */
+            object-fit: cover; /* Maintain aspect ratio and cover the circular area */
+        }
+        .btn1 {
+            display: block;
+            margin: 10px auto 0; /* Center the button */
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn1:hover {
+            background-color: #0056b3;
+        }
+        /* About us */
+
+        .clinic-welcome, .about-us {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .clinic-welcome {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #eaf6ff;
+            border-radius: 20px;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+        
+        .welcome-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .welcome-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+        }
+        
+        .about-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 40px;
+            width: 80%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-section:hover {
+            transform: translateY(-10px);
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 20px;
+        }
+        
+        /* Fade in animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* contact us */
+
+        .appointment-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .appointment-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .appointment-form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .appointment-form h2 {
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .btn {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        /*   btn styling */
+        .btn-secondary {
+            display: inline;
+            padding: 0;
+            border: none;
+            background: none;
+            color: inherit; /* Use a specific color if needed */
+            font-size: 16px; /* Adjust this value to your desired text size */
+            text-decoration: underline; /* Optional: Add underline to make it look like a link */
+            cursor: pointer; /* Ensure it still looks clickable */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://graphicsfamily.com/wp-content/uploads/edd/2021/08/Dental-Logo-Design-Download-scaled.jpg" alt="MR. Dentist Logo">
+                <span>Mahi Dental</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="material-icons">home</i> Home</a></li>
+                    <li><a href="#services"><i class="material-icons">build</i> Services</a></li>
+                    <li><a href="#Doctors"><i class="material-icons">people</i> Doctors</a></li>
+                    <li><a href="#about-us"><i class="material-icons">info</i> About us</a></li>
+                    <li><a href="#contact-us"><i class="material-icons">mail</i> Contact us</a></li>
+            </nav>
+            <div class="contact">
+                <span class="phone-icon">📞</span>
+                <span>+01 35 554 505</span>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1 id="typing-text">
+                <font style="color: rgb(182, 180, 175); font-family: Arial, sans-serif;">Mahi Dental Clinic</font><br>That you<br>Can Trust.</h1>
+            <button class="btn-primary">Book Online</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://www.drsakhambhatti.com/wp-content/uploads/2019/01/d-1.jpg" alt="Dentist">
+        </div>
+    </section>
+    <section id="home">
+    <section class="schedule-visit">
+        <div class="container">
+            <div class="info-box">
+                <h2>Schedule your first visit</h2>
+                <p>As a fee-for-service practice, we offer easy payment plans fit your budget. We're also happy to submit insurance claims on your behalf.</p>
+                <a href="#contact-us" class="btn-secondary">Schedule Your Visit</a>
+
+            </div>
+        </div>
+        </section>
+    </section>
+    <section class="about-us">
+       
+            
+        </div>
+        <section id="services">
+            <div class="services">
+            <div class="service">
+                <div class="service-icon">🦷</div>
+                <h3>Best dental surgeons</h3>
+                <p>We provide access to some of the finest dental surgeons, known for their exceptional skills, advanced techniques, and patient-centric care.".</p>
+                <button class="btn-tertiary">READ MORE</button>
+            </div>
+            <div class="service">
+                <div class="service-icon">🔍</div>
+                <h3>Quick examination</h3>
+                <p>We offer fast and thorough dental examinations to ensure accurate diagnosis and timely treatment. </p>
+                <button class="btn-tertiary">READ MORE</button>
+            </div>
+            <div class="service">
+                <div class="service-icon">😊</div>
+                <h3>Painless procedures</h3>
+                <p>We specialize in painless dental procedures, using advanced techniques and gentle care to ensure a comfortable experience for our patients.</p>
+                <button class="btn-tertiary">READ MORE</button>
+            </div>
+            <div class="service">
+                <div class="service-icon">🩺</div>
+                <h3>Book now</h3>
+                <p>Select the doctor you prefer and book a visit with him or her in a matter of minutes.</p>
+                <button class="btn-tertiary">CHOOSE A DOCTOR</button>
+            </div>
+        </=>
+    </section>
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>We are leading dental studio</h2>
+                <h3>Expertise in our field</h3>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="https://static.vecteezy.com/system/resources/previews/004/619/049/non_2x/healthy-shining-tooth-color-icon-teeth-whitening-isolated-illustration-vector.jpg" alt="Teeth Whitening">
+                    </div>
+                    <h4>Teeth Whitening</h4>
+                    <p>Teeth whitening can significantly brighten your smile using treatments like bleaching, strips, or professional dental procedures.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="https://media.istockphoto.com/vectors/illustration-of-smiling-clean-healthy-tooth-vector-id1151835896?k=6&m=1151835896&s=170667a&w=0&h=nWWCNhM_dOYPQZaFyX-vdX2CmJA-giU6YDR7K0fYemw=" alt="Gum Treatment">
+                    </div>
+                    <h4>Gum Treatment</h4>
+                    <p>Gum treatment involves procedures like scaling, root planing, and sometimes surgery to treat periodontal disease and promote oral health.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="https://c8.alamy.com/comp/2DD2BRR/denture-concept-healthy-teeth-with-a-fixed-dental-bridgework-and-braces-on-top-of-them-vector-illustration-of-human-teeth-in-a-3d-realistic-style-i-2DD2BRR.jpg" alt="Sleep Apnea">
+                    </div>
+                    <h4>Fixed teeth</h4>
+                    <p>Fixed teeth solutions, such as dental implants, bridges, or crowns, restore function and aesthetics by replacing missing or damaged teeth.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="https://static.vecteezy.com/system/resources/previews/018/782/645/original/trendy-root-canal-vector.jpg" alt="Root Canal">
+                    </div>
+                    <h4>Root Canal</h4>
+                    <p>A root canal is a dental procedure that removes infected or damaged pulp from inside a tooth, preventing further infection and saving the tooth.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="https://th.bing.com/th/id/OIP.7IT8ST_6NSMCgdecASAygAHaHa?rs=1&pid=ImgDetMain" alt="Implants">
+                    </div>
+                    <h4>Implants</h4>
+                    <p>
+                        Dental implants are artificial tooth roots made of titanium that are surgically placed into the jawbone to support replacement teeth.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="https://c8.alamy.com/compes/2drmhjk/king-tooth-dental-logo-icono-vector-diseno-de-concepto-grafico-2drmhjk.jpg" alt="Dental Crown">
+                    </div>
+                    <h4>Dental Crown</h4>
+                    <p>A dental crown is a cap placed over a damaged or decayed tooth to restore its shape, strength, and appearance. Crowns protect the tooth and improve its overall functionality.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--doctors section-->
+
+<section id="Doctors">
+    <section class="doctors-section">
+        <h2>Meet our Doctors</h2>
+        <div class="doctors-container">
+            
+                <div class="doctor-card">
+                    <img src="https://image.freepik.com/free-photo/smiling-doctor-young-girl-wearing-stethoscope-medical-gown-dental-brace-spreads-hands-isolated-yellow-background_141793-38787.jpg" alt="Dr. Layla Lohmann" class="doctor-photo">
+                    <h3>Dr. Layla Lohmann</h3>
+                    <p>"All I ever wanted was to reach out and touch another human being not just with my ..."</p>
+                    <button class="btn1">Book an Appointment</button>
+                    <button class="btn1">See Full Bio</button>
+                </div>
+                <div class="doctors-container">
+            
+                    <div class="doctor-card">
+                        <img src="https://th.bing.com/th/id/OIP.IVwf85npYYUcwRp4EIhqDgAAAA?rs=1&pid=ImgDetMain" alt="Dr. Layla Lohmann" class="doctor-photo">
+                        <h3>Dr. Layla Lohmann</h3>
+                        <p>"All I ever wanted was to reach out and touch another human being not just with my ..."</p>
+                        <button class="btn1">Book an Appointment</button>
+                        <button class="btn1">See Full Bio</button>
+                    </div>
+                    <div class="doctors-container">
+            
+                        <div class="doctor-card">
+                            <img src="https://img.freepik.com/premium-photo/smiling-young-female-doctor-pink-background_512531-450.jpg" alt="Dr. Layla Lohmann" class="doctor-photo">
+                            <h3>Dr. Layla Lohmann</h3>
+                            <p>"All I ever wanted was to reach out and touch another human being not just with my ..."</p>
+                            <button class="btn1">Book an Appointment</button>
+                            <button class="btn1">See Full Bio</button>
+                        </div>
+                        <div class="doctors-container">
+            
+                            <div class="doctor-card">
+                                <img src="https://thumbs.dreamstime.com/b/doctor-dark-background-young-man-white-medical-coat-standing-blue-60761244.jpg" alt="Dr. Layla Lohmann" class="doctor-photo">
+                                <h3>Dr. Layla Lohmann</h3>
+                                <p>"All I ever wanted was to reach out and touch another human being not just with my ..."</p>
+                                <button class="btn1">Book an Appointment</button>
+                                <button class="btn1">See Full Bio</button>
+                            </div>
+            <!-- Add more doctor cards here -->
+        </div>
+    </section>
+</section>
+                             <!--About us-->
+
+                             <section id="about-us">
+    <section class="clinic-welcome">
+        <div class="welcome-text">
+            <h1>A Warm Welcome To Our Clinic</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+        <div class="welcome-image">
+            <img src="https://www.liveenhanced.com/wp-content/uploads/2019/09/dental-clinic-25.jpg" alt="Clinic Image">
+        </div>
+    </section>
+    
+    <section class="about-us">
+        <div class="about-section fade-in">
+            <div class="about-text">
+                <h2>Who We Are ?</h2>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system...</p>
+            </div>
+            <div class="about-image">
+                <img src="https://cdn7.dissolve.com/p/D2115_224_405/D2115_224_405_1200.jpg" alt="About Us Image">
+            </div>
+        </div>
+        <div class="about-section fade-in">
+            <div class="about-text">
+                <h2>Why Dentist Care ?</h2>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system...</p>
+            </div>
+            <div class="about-image">
+                <img src="https://www.laservices.ca/sites/default/files/2022-07/satisfied-senior-man-communicating-with-his-dentist-after-dental-at-picture-id1327591353.jpg" alt="About Us Image">
+            </div>
+        </div>
+    </section>
+    </section>
+
+                 <!--contact us-->
+                 
+                 <section id="contact-us">
+<section class="appointment-section">
+    <div class="appointment-image">
+        <img src="https://www.grxstatic.com/4f3rgqwzdznj/2ga0pxQ81B1rAApLN6kTVL/c94f59346b4647a8346a4d92949f5259/GettyImages-1270296459_BW.jpg?format=pjpg&auto=webp&width=704" alt="Doctor">
+    </div>
+    <div class="appointment-form">
+        <h2>Request an Appointment!</h2>
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number *</label>
+                <input type="tel" id="phoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="requestedDate">Requested Date / Time? (Mon - Thu) *</label>
+                <input type="text" id="requestedDate" required>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=1234567890&text=Hello%2C%20I%27m%20interested%20in%20your%20services%21" target="_blank">
+                <button type="button" class="btn">Request Now!</button>
+            </a>
+        </form>
+    </div>
+</section>
+</section>
+
+    <script src="script.js"></script>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const text = "Mahi Dental Clinic\nThat you\nCan Trust.";
+                let index = 0;
+                const typingSpeed = 100; // Adjust typing speed in ms
+                const element = document.getElementById("typing-text");
+                element.innerHTML = ""; // Clear initial text
+        
+                function typeWriter() {
+                    if (index < text.length) {
+                        if (text[index] === "\n") {
+                            element.innerHTML += "<br>";
+                        } else {
+                            element.innerHTML += text[index];
+                        }
+                        index++;
+                        setTimeout(typeWriter, typingSpeed);
+                    }
+                }
+        
+                typeWriter();
+            });
+        </script>
+        <script>
+            
+        </script>
+    
+</body>
+</html>
